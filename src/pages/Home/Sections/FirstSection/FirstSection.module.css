@@ -1,0 +1,139 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: var(--banner-gap);
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.hero > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.hero div:nth-child(2) {
+    position: relative;
+    height: var(--fist-sec-img-cont-hg);
+    width: auto;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.hero div:nth-child(2) img {
+    height: var(--first-sec-ban-hg);
+    object-fit: cover;
+}
+
+.hero h1,
+.hero h2 {
+    text-align: center;
+    font-family: var(--secondary-font);
+}
+
+.hero h1 {
+    font-size: var(--main-title-size);
+    color: var(--primary);
+}
+
+.hero h2 {
+    font-size: var(--subtitle-size);
+    color: white;
+}
+
+.hero > div:nth-child(1) p {
+    font-size: var(--description);
+    color: var(--banner-desc-color);
+
+    text-align: center;
+}
+
+.button {
+    margin: auto;
+}
+
+@media screen and (min-width: 6.25em) and (max-width: 21.875em ) {
+    .hero h1 {
+        font-size: var(--main-title-size);
+    }
+
+    .hero h2 {
+        font-size: var(--subtitle-size);
+    }
+
+    .hero > div:nth-child(1) p {
+        font-size: var(--description);
+    }
+
+    .hero div:nth-child(2) {
+        width: var(--first-sec-desc-wd);
+        height: var(--fist-sec-img-cont-hg);
+    }
+
+    .hero div:nth-child(2) {
+        width: var(--first-sec-desc-wd);
+        height: var(--fist-sec-img-cont-hg);
+    }
+}
+
+@media screen and (min-width: 48.0625em) and (max-width: 64em) {
+    .hero {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .hero > div:nth-child(1) p {
+        width: 13.7em;
+        text-align: left;
+    }
+
+    .hero div:nth-child(2) {
+        width: auto;
+        height: var(--fist-sec-img-cont-hg);
+    }
+
+    .button {
+        margin: 0;
+    }
+
+    .hero h1,
+    .hero h2 {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 64.0625em) {
+    .hero {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .hero h1,
+    .hero h2 {
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .hero > div:nth-child(1) {
+        flex-direction: column;
+    }
+
+    .hero > div:nth-child(1) p {
+        width: 22.7em;
+        text-align: left;
+    }
+
+    .hero div:nth-child(2) {
+        width: auto;
+        height: var(--fist-sec-img-cont-hg);
+    }
+
+    .hero div:nth-child(2) img {
+        height: var(--first-sec-ban-hg);
+    }
+
+    .button {
+        margin: 0;
+    }
+}
